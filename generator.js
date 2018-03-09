@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 const upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 const symbols = ["(", ")", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "-", "+", "=", "|", "\\", "{", "}", "[", "]", ":", ";", "\"", "\'", "<", ">", ",", ".", "?", "/", "_"];
@@ -9,34 +11,38 @@ let password = [];
 // console.log(lower);
  //console.log(symbols.join(""));
 // console.log(numerals);
-generatePassword();
 
-function generatePassword(){
-	let type;
-	for (let i = 0; i < 16; i++) {
-		type = Math.floor(Math.random() * 4);
-		console.log(type);
-		password[i] = generateCharacter(type);
-	}
+$("#click").on("click", function() {
+	generatePassword();
 
-	console.log(password);
-	console.log(password.join(""));
-}
-function generateCharacter(type) {
-	let char;
+	function generatePassword(){
+		let type;
+		for (let i = 0; i < 16; i++) {
+			type = Math.floor(Math.random() * 4);
+			password[i] = generateCharacter(type);
+		}
 
-	if(type === 0){
-		char = upper[Math.floor(Math.random() * upper.length)];
+		console.log(password);
+		$("#password").append("<p> Password: " + password.join("") + "</p>")
 	}
-	if(type === 1){
-		char = lower[Math.floor(Math.random() * lower.length)];
-	}
-	if(type === 2){
-		char = symbols[Math.floor(Math.random() * symbols.length)];
-	}
-	if(type === 3){
-		char = numerals[Math.floor(Math.random() * numerals.length)];
-	}
+	function generateCharacter(type) {
+		let char;
 
-	return char;
-}
+		if(type === 0){
+			char = upper[Math.floor(Math.random() * upper.length)];
+		}
+		if(type === 1){
+			char = lower[Math.floor(Math.random() * lower.length)];
+		}
+		if(type === 2){
+			char = symbols[Math.floor(Math.random() * symbols.length)];
+		}
+		if(type === 3){
+			char = numerals[Math.floor(Math.random() * numerals.length)];
+		}
+
+		return char;
+	}
+});
+
+});
