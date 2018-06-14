@@ -3,29 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Password Generator</title>
-	 <!-- CSS Reset Sheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-	<!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!--Styles-->
-<!--     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
- -->
- 
+	    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    	<!-- Added link to the jQuery Library -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-<div>
-<div>
-		      	<div>
-		      		<button id="click"> Generate Password	   		
-		      		</button>
-		      	</div>
-		      	<div id="password">
-		      		
-		      	</div>
-</div>
+	<div>
+		<h2>Instructions:</h2>
+		<p>
+			<ol>
+				<li>Click generate to create a randomized string of characters.</li>
+				<li>Characters included: Upper/lower case letters. Numerals. Symbols: ( ) ` ~ ! @ # $ % ^ & * - + = | \ { } [ ] : ; " ' < > , . ? / </li>
+				<li>Copy and paste into your password manager of choice.</li>
+			</ol>
+		</p>
+	</div>
+
+  <div>
+    <div>
+      <button id="click"> Generate Password</button>
+    </div>
+    <div id="password"></div>
+  </div>
 </body>
+
 <script type="text/javascript" src="./generator.js"></script>
 </html>
 

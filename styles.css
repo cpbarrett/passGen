@@ -1,0 +1,15 @@
+body {
+  /* Typography */
+  font-size: 18px;
+  line-height: 27px;
+  color: blue;
+
+ 
+  /* Background */
+  background-color: black;
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh;
+  background-attachment: fixed;
+
+}
