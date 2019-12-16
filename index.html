@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Password Generator</title>
-	    <!--Styles-->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- C.P. Barrett -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+        <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
-    	<!-- Added link to the jQuery Library -->
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <!-- Added link to the jQuery Library -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="html5shiv.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<div>
-		<h2>Instructions:</h2>
-		<p>
-			<ol>
-				<li>Click generate to create a randomized string of characters.</li>
-				<li>Characters included: Upper/lower case letters. Numerals. Symbols: ( ) ` ~ ! @ # $ % ^ & * - + = | \ { } [ ] : ; " ' < > , . ? / </li>
-				<li>Copy and paste into your password manager of choice.</li>
-			</ol>
-		</p>
-	</div>
 
-  <div>
     <div>
-      <button id="click"> Generate Password</button>
+        <h2>Instructions:</h2>
+        <p>
+            <ol>
+                <li>Click generate to create a randomized string of characters.</li>
+                <li>Characters included: Upper/lower case letters. Numerals. Symbols: ( ) ` ~ ! @ # $ % ^ & * - + = | \ { } [ ] : ; " ' < > , . ? / </li>
+                <li>Copy and paste into your password manager of choice.</li>
+            </ol>
+        </p>
     </div>
-    <div id="password"></div>
-  </div>
+
+    <div>
+        <button onclick="generatePassword()" id="click"> Generate Password</button>
+        
+        <form id="box">
+            <input type="text" id="field">
+        </form>
+
+        <button onclick="copyPassword()">Copy to Clipboard</button>
+    </div>
+
 </body>
 
-<script type="text/javascript" src="./generator.js"></script>
+<script type="text/javascript" src="./js/generator.js"></script>
 </html>
 
