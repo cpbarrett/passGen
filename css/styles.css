@@ -9,15 +9,33 @@ header, nav, main, address, footer {
 body {
   /* Typography */
   font-size: 20px;
-  line-height: 27px;
+  line-height: 1.5;
   color: white;
+  font-family: Verdana, Arial, sans-serif;
 
  
   /* Background */
   background-color: black;
   background-size: cover;
-  background-repeat: none;
-  height: 100vh;
-  background-attachment: fixed;
+}
 
+#wrapper {
+  width: 80%;
+  min-width: 1000px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16;
+  }
+
+  #wrapper {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 768px) {
 }

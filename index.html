@@ -10,38 +10,36 @@
     <!--[if lt IE 9]>
     <script src="html5shiv.js"></script>
     <![endif]-->
+    <script src="./js/generator.js"></script>
+    <script src="./js/options.js"></script>
 </head>
 <body onload="getLength()">
-
-    <div>
+    
+    <div id="wrapper">
         <h2>Password Generator:</h2>
-        <p>
-            <ol>
+            <!-- <ol>
                 <li>Length: 16</li>
                 <li>Characters included: Upper/lower case letters. Numerals. Symbols: ( ) ` ~ ! @ # $ % ^ & * - + = | \ { } [ ] : ; " ' < > , . ? / </li>
                 <li>Copy and paste into your password manager of choice.</li>
-            </ol>
-        </p>
-    </div>
+            </ol> -->
 
-    <div class="custom-select">
-      <select id="length" value="16"></select>
-    </div>
+        <div class="select">
+            Length:
+            <select id="length"></select>
+        </div>
 
-    <div>
-        <button onclick="generatePassword()" id="click"> Generate Password</button>
+        <div>
+            <button onclick="generatePassword()" id="click"> Generate Password</button>
+            <button onclick="copyPassword()">Copy to Clipboard</button>        
+        </div>
 
-        <button onclick="copyPassword()">Copy to Clipboard</button>        
-    </div>
-
-    <div>
+        <div>
         <form id="box">
             <input type="text" id="field">
         </form>
+        </div>
     </div>
 
 </body>
-<script type="text/javascript" src="./js/generator.js"></script>
-<script type="text/javascript" src="./js/options.js"></script>
 </html>
 
