@@ -6,7 +6,7 @@ const numerals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 function generatePassword(){
 	let password = [];
-	let length = document.getElementById("length").selectedIndex;
+	let length = document.getElementById("length").selectedIndex + 8;
 	let generated = "";
 	updateField(generated);
 	console.log(length);
