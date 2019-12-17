@@ -26,17 +26,24 @@ body {
   margin: 0 auto;
 }
 
-.button {
-  font-size: 26px;
-  border: none;
+p, button, select, input {
+  font-size: 50px;
   text-align: center;
   display: inline-block;
+  border-radius: 12px;
 }
 
 @media only screen and (max-width: 1024px) {
   #wrapper {
     width: 100%;
-    text-align: left;
+    position: relative;
+  }
+
+  p, button, select, input {
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 12px;
   }
 }
 

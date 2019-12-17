@@ -16,28 +16,16 @@
 <body onload="getLength()">
     
     <div id="wrapper">
-        <h2>Password Generator:</h2>
-            <!-- <ol>
-                <li>Length: 16</li>
-                <li>Characters included: Upper/lower case letters. Numerals. Symbols: ( ) ` ~ ! @ # $ % ^ & * - + = | \ { } [ ] : ; " ' < > , . ? / </li>
-                <li>Copy and paste into your password manager of choice.</li>
-            </ol> -->
+        <p>Length:
+        <select id="length"></select></p> <br>
 
-        <div class="select">
-            Length:
-            <select id="length"></select>
-        </div>
-
-        <div>
-            <button onclick="generatePassword()" id="click"> Generate Password</button>
-            <button onclick="copyPassword()">Copy to Clipboard</button>        
-        </div>
-
-        <div>
+        <button onclick="generatePassword()" id="click"> Generate Password</button> <br><br>
+        
         <form id="box">
             <input type="text" id="field">
-        </form>
-        </div>
+        </form> <br>
+
+        <button onclick="copyPassword()">Copy to Clipboard</button>
     </div>
 
 </body>
